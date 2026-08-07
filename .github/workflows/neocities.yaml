@@ -1,0 +1,22 @@
+name: Deploy to Neocities
+
+on:
+  push:
+    branches:
+      - main # Change to 'master' if your main branch uses that name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Deploy to Neocities
+      uses: kognise/neocities-deploy-action@v1
+      with:
+        neocities_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+        # Set to '.' to deploy your entire root directory, or specify a folder like 'public' or 'dist'
+        directory: '.' 
+        # Optional: Set to true to delete files on Neocities that no longer exist in your GitHub repo
+        cleanup: false 
