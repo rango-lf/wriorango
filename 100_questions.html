@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wriorango.css">
+    <title>100 webmaster questions // rango's web hell hole</title>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div id="header-placeholder"></div>
+          <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Find the nav element
+                const nav = document.querySelector('nav');
+                
+                if (nav) {
+                    // Wrap existing nav content in a container
+                    const existingUl = nav.querySelector('ul');
+                    
+                    // Create nav container
+                    const navContainer = document.createElement('div');
+                    navContainer.className = 'nav-container';
+                    
+                    // Create site name
+                    const siteName = document.createElement('div');
+                    siteName.className = 'site-name';
+                    siteName.innerHTML = '<a href="index.html">rango\'s hell hole</a>';
+                    
+                    // Create hamburger menu
+                    const menuBtn = document.createElement('input');
+                    menuBtn.className = 'menu-btn';
+                    menuBtn.type = 'checkbox';
+                    menuBtn.id = 'menu-btn';
+                    
+                    const menuIcon = document.createElement('label');
+                    menuIcon.className = 'menu-icon';
+                    menuIcon.htmlFor = 'menu-btn';
+                    menuIcon.innerHTML = '<span class="navicon"></span>';
+                    
+                    // Clear nav and rebuild structure
+                    nav.innerHTML = '';
+                    navContainer.appendChild(siteName);
+                    navContainer.appendChild(menuBtn);
+                    navContainer.appendChild(menuIcon);
+                    navContainer.appendChild(existingUl);
+                    nav.appendChild(navContainer);
+                }
+            });
+    </script>
+
+        <main>
+            <div class="breadcrumb">
+                <a href="https://wriorango.neocities.org/">home</a> / <a href="https://wriorango.neocities.org/writing.html">writing</a> / <a href="https://wriorango.neocities.org/writing.html#blog">blog</a> / 100 webmaster questions
+            </div>
+
+            <div class="article-container">
+                <div class="article-header">
+                    <h1 class="article-title">100 Webmaster Questions</h1>
+                    <div class="article-meta">
+                        <span> January 8, 2026</span>
+
+                    </div>
+                </div>
+
+                <div class="article-content">
+                  
+                <p>This questionnaire was created by <a href="https://mouseling.net/100webmaster" target="_blank"> Mouseling.net</a>.</p>
+                  
+                  <dl>
+<b>1. Please introduce yourself.</b>
+<p>My name is <b>Rango</b> and I am a wannabe fake NEET on the net. I have various issues and I enjoy putting them online to make it everyone else’s problem.</p>
+
+<b>2. How long have you been making websites?</b>
+<p>Probably since I was nine or ten. I was probably(?) the first generation of students in my school district to experience the coding curriculum they pushed during that comp sci wave. I also learned how to make websites through a summer camp at a local university around this age. I seriously began programming and webdev around 2023.</p>
+
+<b>3. And what got you into the hobby?</b>
+<p>I started feeling hopeless and burnt out with the enshittification of modern social media platforms. Plus, I saw other people’s websites and thought they were cool.</p>
+
+<b>4. What kind of website are you most interested in?</b>
+<p>Websites that are very clearly fuelled by the webmaster’s incredible devotion to/fixation on a certain topic. Minimalism and simplicity are my favourites as well.</p>
+
+<b>5. What's your workflow? Do you plan your websites out thoroughly or do you come up with the design as you go along?</b>
+<p>I typically start with a bullet-point list of exactly what I want the site/page to contain. Sometimes I draft a sketch of the layout with pencil and paper. After, I take things digitally and start going ham on programming. From there, things may change on a whim.</p>
+
+<b>6. Please link to your biggest inspirations.</b>
+<p><a href="https://sweetfish.site/">Sweetfish.site</a>, <a href="https://wichitalk.neocities.org/">Wichitalk</a>, <a href="https://crotovane.neocities.org/">Crotovane</a>, and <a href="https://ribo.zone/">Ribo.zone</a>. </p>
+
+<b>7. What's your favourite part about making websites?</b>
+<p>The freedom to do whatever I want, within my capabilities.</p>
+
+<b>8. And the thing you struggle with the most?</b>
+<p>Making things “aesthetic” and decorated. My instinctual tendency is to prioritise function over form. </p>
+
+<b>9. Do you keep the same layout on all of your pages? Or do you use different ones?</b>
+<p>Usually, unless it’s something like a shrine. I like consistency.</p>
+
+<b>10. How confident are you with CSS?</b>
+<p>Ehhh… I can make things functional, but not very pretty.</p>
+
+<b>11. Do you know how to correctly use &lt;dl&gt;?</b>
+<p>Lol, no.</p>
+
+<b>12. What is your favourite HTML element?</b>
+<p>Probably li, p, and b. I like writing.</p>
+
+<b>13. If you're making a new web page from scratch, what is the first thing you do?</b>
+<p>Decide what I want it to involve/contain, and then plan from there.</p>
+
+<b>14. Do you know JavaScript?</b>
+<p>A little bit.</p>
+
+<b>15. How about PHP?</b>
+<p>No.</p>
+
+<b>16. Does your website have a theme that you stick to?</b>
+<p>It must be a lean, green, and clean machine.</p>
+
+<b>17. Are you more focused on content or design?</b>
+<p>Content.</p>
+
+<b>18. Do you own a domain name? If not, would you ever want to?</b>
+<p>No. One day I’d like to, but I’m worried I won’t be able to decide on a domain name or I may change my mind later on a whim. </p>
+
+<b>19. What do you think of nostalgia-focused or "retro" websites?</b>
+<p>Cool, but definitely not my thing. I don't really understand the obsession with the "old web" and I feel like the indie web space is almost oversaturated with this aesthetic. I’ve seen several that have unique appearances, but lack in interesting content, so I don’t find myself revisiting them. </p>
+
+<b>20. Is your HTML valid? Do you even check?</b>
+<p>Good question! No, I don’t even check lolz.</p>
+
+<b>21. What are your opinion on buttons and banners?</b>
+<p>They’re cool.</p>
+
+<b>22. What do you think of button walls in particular?</b>
+<p>I tend to glaze over them. I appreciate it when the webmaster puts their button wall on a separate page and not in the homepage/index.</p>
+
+<b>23. If you started over again, would you make something similar or completely different?</b>
+<p>Probably similar in both content and appearance. I’m predictable.</p>
+
+<b>24. Are you envious of other people's websites?</b>
+<p>Yes. I always have the urge to copy what super cool webmaster 42067 is doing with their site.</p>
+
+<b>25. What text editor do you use?</b>
+<p>Codepen.io and VSCode.</p>
+
+<b>26. Why do you use that one?</b>
+<p>Codepen.io is awesome for live previews. I use VSCode when I’m working offline. There’s no real reason beyond that.</p>
+
+<b>27. Do you host your image files on your web server, or on another host?</b>
+<p>I host most images on Catbox or I shamelessly right click and copy image address. My artwork and other hand-drawn assets are always hosted on my site.</p>
+
+<b>28. This might not be relevant to you, but what's your opinion on the Neocities vs. Nekoweb debate?</b>
+<p>I don’t really care, and I had no idea such a debate existed in the first place. Do whatever you want with your site forever.</p>
+
+<b>29. How much server space would you estimate your main website takes up?</b>
+<p>According to Neocities, I am currently using 8.71 MB out of 1 GB.</p>
+
+<b>30. Do you keep local backups of your files?</b>
+<p>Yes. </p>
+
+<b>31. Do you prefer simple or highly visual websites?</b>
+<p>Less is more, in my mind. Occasionally, I like poking around websites that are highly visual, decorated, intricate, etc., but I tend to revisit simple websites more often because they’re less visually cluttered and easier to navigate.</p>
+
+<b>32. Do you stick to certain colours? Do you do that on purpose, or is it your subconscious?</b>
+<p>I like the green colour palette I’ve got going on for no particular reason. It’s pretty and not visually straining, I guess(?).</p>
+
+<b>33. Have you ever thought about quitting? Why?</b>
+<p>Not seriously. If I ever need to take a break to focus on other matters, this site will always remain available and I'll come back to update it eventually.</p>
+
+<b>34. Do you have many webmaster friends, or is it a solitary hobby?</b>
+<p>Although I occasionally interact with mutuals on my Neocities feed, I almost never contact people individually beyond that. I am quite socially-anxious and struggle to maintain close connections with others.</p>
+
+<b>35. Do people in your real life know about your website?</b>
+<p>Yes. Several of my friends and family members do. Only a few actually visit it regularly, I think.</p>
+
+<b>36. Do you update your website very often? How often is "very often"?</b>
+<p>Depends. If I’m very busy IRL, I’ll update maybe once in a couple of weeks. If I’m on break or just not very occupied I can update almost every day.</p>
+
+<b>37. And the overall design, do you change that much? Why or why not?</b>
+<p>I’ve changed my layout drastically maybe 4-5 times in the past year and a half, so yeah.</p>
+
+<b>38. Is your website more you-focused, hobby-focused, or outside world-focused?</b>
+<p>Mostly me-focused.</p>
+
+<b>39. Do you do web design professionally?</b>
+<p>No.</p>
+
+<b>40. If not, would you like to? And if you're comfortable answering, what do you do for work?</b>
+<p>Probably not, unless I had no other options of making a living. I am an undergraduate university student (derogatory).</p>
+
+<b>41. Do you communicate with people by email very much?</b>
+<p>For school and work matters, yes. For personal and web-related communications, not often; unless webring applications count.</p>
+
+<b>42. Some people reject social media and use websites as a replacement. Do you keep social media outside of your website?</b>
+<p>I am active on many social media platforms, including Instagram, TikTok, Twitter, Reddit, Tumblr… yes, feel free to shame me. I primarily use these platforms to keep myself on top of current events, memes, and fandom shenanigans. It is hard to imagine severing myself completely from social media when much of my interests and connections with other people revolve around them.</p>
+
+<b>43. How about instant messengers? Do you use a mainstream one like Discord or Telegram? Or something like Matrix? Do you avoid them?</b>
+<p>I use Discord and Instagram very regularly to keep in touch with people. I don’t know what I’d do without them because I don’t interact with people in-person all that much.</p>
+
+<b>44. Do you listen to music while you work on websites? If so, what kinds of artists?</b>
+<p>Yes. I listen to a wide range of genres so it's hard to pinpoint just one. I'll genuinely listen to anything except maybe hard rock, metal, punk... etc.</p>
+
+<b>45. Do you keep everything you make on one website, or do you have more than one?</b>
+<p>I have another website for engineering school. It functions as a resource hub for other students, project portfolio, and web resume.</p>
+
+<b>46. On a similar note, do you keep to one topic on your site, or many?</b>
+<p>Many topics. I am an enjoyer of a multitude of things.</p>
+
+<b>47. Do you present your real self, or at least try? Or do you construct a persona on purpose?</b>
+<p>I try to be as true to myself as possible here. After all, Wriorango was made for me to express myself, my thoughts, and interests however I want to. Despite that, I find that even in an online space where I have no obligation to anyone, I always have a subconscious reminder that what I say and do is still going to be perceived by the public.</p>
+
+<b>48. Have you ever made a good friend thanks to your website?</b>
+<p>No.</p>
+
+<b>49. Are you happy with the way HTML and CSS currently work?</b>
+<p>I’m impartial to it.</p>
+
+<b>50. What are practices that you think people should avoid?</b>
+<p>Loud autoplay music, flashing lights and gifs, eyestraining colours… basically anything that could make your site painful or even deadly (e.g. epilepsy) for visitors. Also, disabling right-clicks. I know some people do that to deter others from copying their source code, but it can really hinder user-accessibility.</p>
+
+<b>51. What about under-utilised practices, or things you think people should do more?</b>
+<p>Mobile-responsiveness, minimalism, sharing code and resources. I don’t know, these are just my personal inclinations. </p>
+
+<b>52. Do you use a lot of semantic HTML? Or are you guilty of generic structure?</b>
+<p>A mix of generic and semantic HTML, but generic <div>’s dominate. I don’t really care.</p>
+
+<b>53. Do you consider different browsers?</b>
+<p>Yes. I’d like to move to Firefox but all of my important school and work stuff is on a Google account.</p>
+
+<b>54. Speaking of, what's your preferred browser? Convince your readers why they should use it.</b>
+<p>I mainly use Google Chrome. It sucks. I’m not going to convince you to use it.</p>
+
+<b>55. And what OS are you on?</b>
+<p>Windows 11.</p>
+
+<b>56. Do you have a strong opinion on that, or do you just happen to use it?</b>
+<p>Not a huge fan of it, but I need it for certain programs for school.</p>
+
+<b>57. Are your websites mobile-friendly?</b>
+<p>I'd consider them mobile-responsive but not totally mobile-friendly (yet). Many of my shrine, OC, etc. pages are not responsive and probably will never be.</p>
+
+<b>58. What are your thoughts on autoplay?</b>
+<p>Nope nope nope.</p>
+
+<b>59. What are your thoughts on webrings? Are you in any?</b>
+ <p>Delightful. I am in more than I can count, and I am always trying to add more to my collection.</p>
+
+<b>60. Do you have any web shrines? What do you like to see in that sort of page?</b>
+<p>Yes, I have three (that I still need to complete). I don’t have any strong opinions on what “should” be on a shrine, but I always appreciate a webmaster who is clearly passionate about the subject of interest.</p>
+
+<b>61. Are your websites "cliche", in your opinion?</b>
+<p>I’m not sure what that means. Kind of? Many other websites also have about pages, guestbooks, blogs, oc pages, shrines, etc.</p>
+
+<b>62. What is your ideal website? Are you striving for that, or for something else?</b>
+<p>My ideal website is one that is functional, easy to maintain and modify, and most importantly, is true to myself. This is the design philosophy that guides all of my webdev endeavours.</p>
+
+<b>63. Are you an artist? Do you draw or design your own assets?</b>
+<p>I am, but I do not draw or design my own assets because I am a lazy bum.</p>
+
+<b>64. What are your favourite resource sites?</b>
+<p>Where it all started: <a href=”https://teppyslayouts.neocities.org/”>Teppy’s Layouts and Tips</a>. </p>
+
+<b>65. Is there a habit you just can't get away from no matter how hard you try?</b>
+<p>Shoving CSS styling into my HTML code (style=””). </p>
+
+<b>66. What's your biggest advice for a new webmaster?</b>
+<p>Have fun with it. Try not to compare yourself with others, just do what feels right for you.</p>
+
+<b>67. Do you keep all your styling in CSS? Or do you hard-code some?</b>
+<p>(Haha 67). Most of my styling is in CSS, but I have a bad habit of sporadically hard-coding some without any rhyme or reason.</p>
+
+<b>68. What do you think of frameset layouts?</b>
+<p>No strong opinion. I don’t use them.</p>
+
+<b>69. How about table-based layouts?</b>
+<p>I don’t use them. Too much work and it’s often clunky.</p>
+
+<b>70. Do you subscribe to the ideas of "one-column", "two-column" and "three-column" layouts? Do you use any of these?</b>
+<p>Two-column and three-column FTW.</p>
+
+<b>71. Do you spend longer on the HTML or the CSS?</b>
+<p>I’m not totally sure–I think an equal share of time for both?</p>
+
+<b>72. Have you ever made a page with no CSS? It's useful for your thoughts.</b>
+<p>Probably just the header.html page for my site.</p>
+
+<b>73. Do you ever find yourself making layouts with nothing to put on them? Or do you only make layouts when the need arises?</b>
+<p>I only make layouts when I need to, but I am considering designing F2U layouts for others.</p>
+
+<b>74. Would you consider yourself a beginner? Or advanced? Somewhere in the middle?</b>
+<p>Somewhere in the middle. I don’t know. Fuck it we ball.</p>
+
+<b>75. Do you have a habit of looking at the source code of websites you visit?</b>
+<p>Sometimes, if there is a particular thing that is interesting to me and/or if I want to yoink something from them (with permission, of course).</p>
+
+<b>76. How did YOU learn how to make websites?</b>
+<p>W3Schools and copying other people.</p>
+
+<b>77. Do you ever force elements to do things they're not supposed to?</b>
+<p>I can’t recall a specific instance, but I’m 100% sure I have.</p>
+
+<b>78. Thoughts on floating elements?</b>
+<p>I’m guilty of it.</p>
+
+<b>79. When you're sizing stuff, what do you use first? Do you use px, em, %, or something else?</b>
+<p>px and %, and I don’t think that will change any time soon.</p>
+
+<b>80. Do you have a favourite font?</b>
+<p>MS Gothic and monospace, baby.</p>
+
+<b>81. Would you run a website with another person? How would that work?</b>
+<p>Depends on who it is and for what purpose. I’d totally be down for a collaborative effort in creating and maintaining something like a wiki, database, etc. for something I’m passionate about.</p>
+
+<b>82. Do you surf the Web to find new personal websites very often?</b>
+<p>Sort of? I explore the Special Sauce page on Neocities once in a while.</p>
+
+<b>83. Do you bookmark other people's websites? How would you feel knowing someone else bookmarked yours?</b>
+<p>Occassionally I do. I’d definitely appreciate the gesture if someone bookmarked my site.</p>
+
+<b>84. What do you want people to be most impressed with when they see your website?</b>
+<p>My writing. Although I don’t personally find it all that impressive or unique, there is a part of me that enjoys the attention given to my inner thoughts.</p>
+
+<b>85. Are you interested in technology outside of websites? Do you collect?</b>
+<p>I’m an engineer so that’s kind of a given :P I do not collect, though I may start sometime in the near future.</p>
+
+<b>86. How often and for how long are you online?</b>
+<p>Everyday for an unhealthy amount of hours.</p>
+
+<b>87. When it comes to your website, who is your target audience?</b>
+<p>Myself first and foremost, and for other people who are weird and off-putting. </p>
+
+<b>88. Have you ever been interested in XHTML?</b>
+<p>Not really.</p>
+
+<b>89. Do you program in general? Have you ever written a program for use with or on your website, not counting simple JavaScript?</b>
+<p>Yes. I’ve used MATLAB and Python for my engineering courses. Outside of school, I haven’t used them for/with my site.</p>
+
+<b>90. Speaking of programs that help you make websites, what do you think of static site generators (SSGs)? Have you ever used one?</b>
+<p>Yes. I’ve used Carrd, Rentry, Strawpage, etc. They’re cool and great for very beginners who are just learning webdev. </p>
+
+<b>91. Do you keep a hitcounter? Why or why not?</b>
+<p>I used to keep a flag counter to see where my visitors come from, purely out of curiosity. I don’t exactly remember why I got rid of it, but I don’t plan to add it back because I don’t have enough space on my index. Now I just keep a FC2 clap gimmick on my site.</p>
+
+<b>92. Do you frequent forums? Which ones?</b>
+<p>I do not.</p>
+
+<b>93. Do you write your page content directly into the editor, or do you prepare it elsewhere, like a text document or a Word document?</b>
+<p>If it is very writing-heavy, I use a separate text editor. I am currently writing this on a Google doc.</p>
+
+<b>94. Do you think you appear cool to others? A more accurate answer now: do other people ever say you're cool?</b>
+<p>I hope not. Being a psychotic loser is central to my identity. I’ve had several people online and in-person say that I’m cool, which always makes me feel like someone is putting a loaded gun to my head.</p>
+
+<b>95. Are you embarrassed of your old work? Have you ever deleted everything out of shame?</b>
+<p>Yes. I have deleted several pages that either looked really ugly or the content made me want to shrivel up.</p>
+
+<b>96. Would you close down your website if you couldn't update it, or would you leave an archive?</b>
+<p>No. I’d leave it up on the original hosting platform and archive it on something like archive.ph or the Wayback Machine. </p>
+
+<b>97. Do you reveal a lot about yourself on your website? Or are you more secretive?</b>
+<p>I’m not sure what constitutes as ‘a lot’. I'm not secretive for the most part. I think I'm very open about my beliefs, thoughts, interests, and identifiers. I am more protective of information that could point strangers to identifying me IRL (i.e. my appearance).</p>
+
+<b>98. Are you willing to reveal who your best online friend is, and/or if they have a website?</b>
+<p>No.</p>
+
+<b>99. And do you optimise the images on your website?</b>
+<p>No. Perhaps I should.</p>
+
+<b>100. We're out of time! How do you feel after answering 100 questions? ....other than exhausted.</b>
+<p>This was fun and introspective.</p>
+</dl>
+
+
+                  
+                </div>
+
+               
+            </div>
+
+            <footer>
+                <p>wriorango // est. 2024</p>
+             
+                    <a href="writing.html">← back to writing</a> · 
+                    <a href="https://wriorango.neocities.org/">home</a>
+                </p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

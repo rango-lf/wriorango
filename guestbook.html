@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wriorango.css">
+    <title>guestbook // rango's web hell hole</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Find the nav element
+                const nav = document.querySelector('nav');
+                
+                if (nav) {
+                    // Wrap existing nav content in a container
+                    const existingUl = nav.querySelector('ul');
+                    
+                    // Create nav container
+                    const navContainer = document.createElement('div');
+                    navContainer.className = 'nav-container';
+                    
+                    // Create site name
+                    const siteName = document.createElement('div');
+                    siteName.className = 'site-name';
+                    siteName.innerHTML = '<a href="index.html">rango\'s hell hole</a>';
+                    
+                    // Create hamburger menu
+                    const menuBtn = document.createElement('input');
+                    menuBtn.className = 'menu-btn';
+                    menuBtn.type = 'checkbox';
+                    menuBtn.id = 'menu-btn';
+                    
+                    const menuIcon = document.createElement('label');
+                    menuIcon.className = 'menu-icon';
+                    menuIcon.htmlFor = 'menu-btn';
+                    menuIcon.innerHTML = '<span class="navicon"></span>';
+                    
+                    // Clear nav and rebuild structure
+                    nav.innerHTML = '';
+                    navContainer.appendChild(siteName);
+                    navContainer.appendChild(menuBtn);
+                    navContainer.appendChild(menuIcon);
+                    navContainer.appendChild(existingUl);
+                    nav.appendChild(navContainer);
+                }
+            });
+    </script>
+        <main>
+            <div class="page-title">guestbook</div>
+
+        
+
+            <div class="box">
+                <div class="box-header">rules & guidelines</div>
+                <div class="box-content">
+                    <p><strong>Please be respectful.</strong> </p>
+                    <p>✗ No spam, hate speech, or offensive content</p>
+                    <p>✗ No advertising or promotional spam</p>
+                </div>
+            </div>
+
+            <div class="guestbook-container">
+                <div class="guestbook-header">✎ sign my guestbook</div>
+                <iframe src="https://rango.atabook.org/" class="guestbook-frame" title="Guestbook"></iframe>
+            </div>
+
+            <div class="box">
+                <div class="box-header">about this guestbook</div>
+                <div class="box-content">
+                    <p>This guestbook is powered by <a href="https://atabook.org/" target="_blank">Atabook</a>.</p>
+                    <p>All messages are publicly visible and will appear in the frame above. Thank you for taking the time to sign, I try to read all of them!</p>
+                </div>
+            </div>
+
+            <footer>
+                <p>wriorango // est. 2024</p>
+                <p>
+                    <a href="index.html">← back to home</a>
+                </p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

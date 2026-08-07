@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wriorango.css">
+    <title>characters // rango's web hell hole</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="header-placeholder"></div>
+         <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Find the nav element
+                const nav = document.querySelector('nav');
+                
+                if (nav) {
+                    // Wrap existing nav content in a container
+                    const existingUl = nav.querySelector('ul');
+                    
+                    // Create nav container
+                    const navContainer = document.createElement('div');
+                    navContainer.className = 'nav-container';
+                    
+                    // Create site name
+                    const siteName = document.createElement('div');
+                    siteName.className = 'site-name';
+                    siteName.innerHTML = '<a href="index.html">rango\'s hell hole</a>';
+                    
+                    // Create hamburger menu
+                    const menuBtn = document.createElement('input');
+                    menuBtn.className = 'menu-btn';
+                    menuBtn.type = 'checkbox';
+                    menuBtn.id = 'menu-btn';
+                    
+                    const menuIcon = document.createElement('label');
+                    menuIcon.className = 'menu-icon';
+                    menuIcon.htmlFor = 'menu-btn';
+                    menuIcon.innerHTML = '<span class="navicon"></span>';
+                    
+                    // Clear nav and rebuild structure
+                    nav.innerHTML = '';
+                    navContainer.appendChild(siteName);
+                    navContainer.appendChild(menuBtn);
+                    navContainer.appendChild(menuIcon);
+                    navContainer.appendChild(existingUl);
+                    nav.appendChild(navContainer);
+                }
+            });
+    </script>
+
+        <main>
+            <div class="page-title">characters</div>
+
+            <div class="intro-box">
+                <p>Click on any character card to visit their dedicated page and learn more about them. <b>Please mind the content warnings</b>. </p>
+            </div>
+
+            <div class="character-grid">
+                <div class="character-card">
+                    <div class="shrine-image" style="background-image: url('https://files.catbox.moe/so7qhs.jpg'); background-size: cover; background-position: center">
+                    <span class="shrine-status wip">wip</span>
+                    </div>
+                    <div class="character-info">
+                        <div class="character-name">DILLON "DIO" OWEN</div>
+                        <div class="character-description">
+                           Absolutely insane guy who makes his internalised homophobia everyone else's problem.<br>
+                          
+                        </div>
+                        <br>
+                        <a href="https://wriorango.neocities.org/ocs/dio" class="shrine-link">enter →</a>
+                        <br>
+                        <div class="character-tags">
+                            <span class="tag">main protagonist</span>
+                            <span class="tag">the achaea project</span>
+                        </div>
+                    </div>
+                </a>
+</div>
+            </div>
+
+            <footer>
+                <p>wriorango // est. 2024</p>
+                <p>
+                    <a href="index.html">← back to home</a>
+                </p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
