@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>art :: wriorango</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	/* Container positioning */
+.gallery-cw {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Blur the image while censored */
+.gallery-cw.censored img {
+    filter: blur(12px);
+    opacity: 0.3;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* Style the warning text overlay */
+.gallery-cw .cw-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none; /* Allows click events to pass through to the div */
+    z-index: 2;
+}
+
+/* Hide the warning text once uncensored */
+.gallery-cw:not(.censored) .cw-overlay {
+    display: none;
+}
+	</style>
+	<script>
+	function revealContent(element, event, src, title, year) {
+    // If it's still censored, reveal it on the first click
+    if (element.classList.contains('censored')) {
+        element.classList.remove('censored');
+    } else {
+        // On the second click, open the lightbox as normal
+        openLightbox(src, title, year);
+    }
+}
+	</script>
+</head>
+<body>
+	<div class="layout">
+		<div id="sidebar" class="sidebar"><script src="sidebar.js" defer></script></div>
+		<div class="main">
+			<div class="content-grid">
+
+				<section class="card card--wide">
+					<h1 class="card-title">art</h1>
+					<p>A collection of my scribbles, most unfinished and uncoloured (I am lazy). All of them are made with Procreate and tend to focus on a few select characters (ahahaha... aha). Click any image to view it larger.</p>
+				</section>
+
+				<div class="card--wide">
+					<div class="section-divider"><b>2026</b></div>
+					<div class="gallery">
+						<div class="gallery-item" onclick="openLightbox('art/IMG_5393.PNG', 'Dio Shitpost', '2026')">
+							<img src="art/IMG_5393.PNG" alt="Dio Shitpost">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('art/unnamed (6).jpg', 'Jesus H. Christ', '2026')">
+							<img src="art/unnamed (6).jpg" alt="Jesus H. Christ">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('art/unnamed (7).jpg', 'Jesus Christ in tatreez', '2026')">
+							<img src="art/unnamed (7).jpg" alt="Jesus Christ in tatreez">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('https://files.catbox.moe/1apd27.png', 'New Dio chibi design', '2026')">
+							<img src="https://files.catbox.moe/1apd27.png" alt="New Dio chibi design">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('https://files.catbox.moe/fi4961.png', 'Penelope Nash', '2026')">
+							<img src="https://files.catbox.moe/fi4961.png" alt="Penelope Nash">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('https://files.catbox.moe/lgimuc.PNG', 'Rough half-naked Dio', '2026')">
+							<img src="https://files.catbox.moe/lgimuc.PNG" alt="Rough half-naked Dio">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('https://files.catbox.moe/tgvrga.PNG', 'Dio smoking', '2026')">
+							<img src="https://files.catbox.moe/tgvrga.PNG" alt="Dio smoking">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('https://files.catbox.moe/ix9ptw.jpg', 'Lys redesign', '2026')">
+							<img src="https://files.catbox.moe/ix9ptw.jpg" alt="Lys redesign">
+						</div>
+						<div class="gallery-item gallery-cw" onclick="openLightbox('https://media.discordapp.net/attachments/1320270997856976950/1484000238774784141/IMG_5662.png?ex=69bca26c&is=69bb50ec&hm=460fd1d811ebacd7415cfab18438e6352f7331788aa69556d15957844b69774b&=&format=webp&quality=lossless&width=1040&height=890', 'Dio & Lys body studies sketch', '2026')">
+							<span>TWs: Nudity, SH scars<br>(click to view)</span>
+						</div>
+						<div class="gallery-item" onclick="openLightbox('https://files.catbox.moe/f007rh.jpg', 'New Dio chibi', '2026')">
+							<img src="https://files.catbox.moe/f007rh.jpg" alt="New Dio chibi">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('https://files.catbox.moe/6bnqd1.jpg', 'Dio barrel twists sketch', '2026')">
+							<img src="https://files.catbox.moe/6bnqd1.jpg" alt="Dio barrel twists sketch">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('https://files.catbox.moe/fo003j.jpg', 'Another unfinished Dio', '2026')">
+							<img src="https://files.catbox.moe/fo003j.jpg" alt="Another unfinished Dio">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('https://files.catbox.moe/7xgldb.jpg', '😳', '2026')">
+							<img src="https://files.catbox.moe/7xgldb.jpg" alt="😳">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('https://files.catbox.moe/kj182z.jpg', 'Dio sister Cami', '2026')">
+							<img src="https://files.catbox.moe/kj182z.jpg" alt="Dio sister Cami">
+						</div>
+						<div class="gallery-item gallery-cw censored" onclick="revealContent(this, event, 'https://files.catbox.moe/smtria.jpeg', 'Ugly sketch of Dillon amputating his wife', '2026')">
+    <img src="https://files.catbox.moe/smtria.jpeg" alt="Ugly sketch of Dillon amputating his wife for shits and giggles">
+    <span class="cw-overlay">TWs: Blood<br>(click to reveal)</span>
+</div>
+<div class="gallery-item" onclick="openLightbox('https://files.catbox.moe/xmcq7p.jpg', 'Engineering Society election sticker', '2026')">
+							<img src="https://files.catbox.moe/xmcq7p.jpg" alt="Engineering Society election sticker">
+						</div>
+					</div>
+				</div>
+
+				<div class="card--wide">
+					<div class="section-divider"><b>2025</b></div>
+					<div class="gallery">
+						<div class="gallery-item" onclick="openLightbox('art/IMG_5306.PNG', 'Dio Chibi Keychain', '2025')">
+							<img src="art/IMG_5306.PNG" alt="Dio Chibi Keychain">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('art/IMG_5394.PNG', 'Lys Chibi Keychain', '2025')">
+							<img src="art/IMG_5394.PNG" alt="Lys Chibi Keychain">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('art/IMG_5395.PNG', 'DioLys Chibi Keychain', '2025')">
+							<img src="art/IMG_5395.PNG" alt="DioLys Chibi Keychain">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('art/IMG_5396.jpg', 'Dio scribble based off KDot DAMN outfit + Pinterest ref', '2025')">
+							<img src="art/IMG_5396.jpg" alt="Dio scribble based off KDot DAMN outfit + Pinterest ref">
+						</div>
+						<div class="gallery-item" onclick="openLightbox('art/IMG_5397.PNG', 'Dio scribble based off Pinterest ref', '2025')">
+							<img src="art/IMG_5397.PNG" alt="Dio scribble based off Pinterest ref">
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<footer class="site-footer">© 2026 wriorango — running on ovaltine</footer>
+		</div>
+	</div>
+
+	<!-- lightbox -->
+	<div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+		<div class="lightbox-box" onclick="event.stopPropagation()">
+			<button type="button" class="lightbox-close" onclick="closeLightbox()">✕</button>
+			<img id="lightbox-img" src="" alt="Full size artwork">
+			<div class="lightbox-caption" id="lightbox-caption">
+				<b id="lightbox-title"></b>
+				<span id="lightbox-year"></span>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function openLightbox(src, title, year) {
+			const overlay = document.getElementById('lightbox');
+			const img = document.getElementById('lightbox-img');
+			const caption = document.getElementById('lightbox-caption');
+			document.getElementById('lightbox-title').textContent = title || '';
+			document.getElementById('lightbox-year').textContent = year || '';
+			img.src = src;
+			caption.style.display = title ? 'flex' : 'none';
+			overlay.classList.add('active');
+			document.body.style.overflow = 'hidden';
+		}
+
+		function closeLightbox() {
+			document.getElementById('lightbox').classList.remove('active');
+			document.body.style.overflow = '';
+		}
+
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape') closeLightbox();
+		});
+	</script>
+
+	<script src="js/sidebar.js"></script>
+</body>
+</html>

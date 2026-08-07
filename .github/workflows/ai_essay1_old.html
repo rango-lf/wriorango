@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wriorango.css">
+    <title>everyone is freaking out about ai, no one knows how it works // rango's web hell hole</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="header-placeholder"></div>
+          <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Find the nav element
+                const nav = document.querySelector('nav');
+                
+                if (nav) {
+                    // Wrap existing nav content in a container
+                    const existingUl = nav.querySelector('ul');
+                    
+                    // Create nav container
+                    const navContainer = document.createElement('div');
+                    navContainer.className = 'nav-container';
+                    
+                    // Create site name
+                    const siteName = document.createElement('div');
+                    siteName.className = 'site-name';
+                    siteName.innerHTML = '<a href="index.html">rango\'s hell hole</a>';
+                    
+                    // Create hamburger menu
+                    const menuBtn = document.createElement('input');
+                    menuBtn.className = 'menu-btn';
+                    menuBtn.type = 'checkbox';
+                    menuBtn.id = 'menu-btn';
+                    
+                    const menuIcon = document.createElement('label');
+                    menuIcon.className = 'menu-icon';
+                    menuIcon.htmlFor = 'menu-btn';
+                    menuIcon.innerHTML = '<span class="navicon"></span>';
+                    
+                    // Clear nav and rebuild structure
+                    nav.innerHTML = '';
+                    navContainer.appendChild(siteName);
+                    navContainer.appendChild(menuBtn);
+                    navContainer.appendChild(menuIcon);
+                    navContainer.appendChild(existingUl);
+                    nav.appendChild(navContainer);
+                }
+            });
+    </script>
+
+
+        <main>
+            <div class="breadcrumb">
+                <a href="https://wriorango.neocities.org/">home</a> / <a href="https://wriorango.neocities.org/writing.html">writing</a> / <a href="https://wriorango.neocities.org/writing.html#blog">essays & thoughts</a> / Everyone is Freaking Out About AI, No One Knows How It Works
+            </div>
+
+            <div class="article-container">
+                <div class="article-header">
+                    <h1 class="article-title">everyone is freaking out about ai, no one knows how it works</h1>
+                    <div class="article-meta">
+                        <span> January 16, 2026 // 6204 words</span>
+
+                    </div>
+                </div>
+
+                <div class="article-content">
+                  
+                   <div class="article-warnings">
+                     <ul><b><u>OBLIGATORY DISCLAIMER:</u></b> This is an opinion piece, not an academic paper. Take everything here with a grain of salt, as you should with anything on the internet.</ul>
+                  </div>
+                  <br>
+
+<h1><strong>I. Introduction</strong></h1>
+
+<p><span style="font-weight: 400;">Over the past two years, there&rsquo;s been this anxiety that has metastasized across the online spaces I frequently visit. Instagram comment sections fill with artists hurling accusations at each other without evidence. Tumblr overflows with (so-called) leftists declaring that anyone who has touched ChatGPT shares complicity in environmental destruction and worker exploitation. Twitter threads host harassment campaigns against fanfiction writers, who have their gay smut scrutinized for em dashes, repetition, and any hint of algorithmic generation. These accusations fly fast and furious, often substantiated by nothing more than </span><em><span style="font-weight: 400;">"this feels AI-generated to me."</span></em></p>
+
+<p><span style="font-weight: 400;">What we are witnessing is not rational discourse. This seems like something else entirely: a full-blown moral panic, replete with witch hunts, purity tests, and wholesale demonization of anyone who fails to perform sufficient contempt for the technology.&nbsp;</span></p>
+
+<p><span style="font-weight: 400;">Some of this fear, annoyance, and anger is reasonable. Generative AI does present some genuine challenges regarding labor displacement, copyright (actually, fuck copyright), environmental impact, and misuse. More personally, I hate seeing AI goon art rapidly displace <i>hand-drawn</i> goon art on Rule 34. These are legitimate concerns that deserve serious analysis. But somewhere between "this technology has problems" and "using AI makes you evil," we have lost the plot entirely. The discourse has become so detached from reality and so saturated with misinformation that productive conversation has become nearly impossible. It's incredibly reminiscent of the painful conversations I've had with reactionary anti-vaxxers, funnily enough.</span></p>
+
+<p><span style="font-weight: 400;">The core problem is that almost everyone participating in these heated debates doesn't actually understand what they're arguing about. "AI" has become a catch-all bogeyman. It is a repository for every anxiety about technology, capitalism, and the future of creative work. Meanwhile, the actual mechanics of these systems, their genuine capabilities and limitations, and the real distribution of harms they cause remain obscure to most participants in the conversation.</span></p>
+
+<p><span style="font-weight: 400;">I will, in vain, attempt to cut through the noise through this shoddy opinion piece/essay/rant hosted on the net. My thesis is straightforward: the current moral panic around AI conflates different technologies, circulates factually incorrect claims about environmental impact, and ultimately misdirects justified anger about exploitation away from its actual source. The problem is not the technology itself but capitalism's relentless drive to extract maximum value while distributing gains only to those who own the means of production. Understanding the distinction matters because our failure to grasp it means we're fighting the wrong battles while the actual mechanisms of harm continue unimpeded.</span></p>
+
+<h1><strong>II. What is "AI"?</strong></h1>
+
+<p><span style="font-weight: 400;">Let's start with basics that surprisingly few people grasp&ndash;"AI" is not a monolithic entity. This is an umbrella term covering different computational approaches. Treating it as a single thing makes about as much sense as using "vehicle" to mean both bicycles and nuclear submarines.</span></p>
+
+<p><span style="font-weight: 400;">Artificial intelligence, at its broadest, describes machines that mimic human intelligence and cognitive functions like problem-solving and learning. This encompasses everything from simple rule-based systems to sophisticated neural networks. We distinguish between artificial intelligence (the overarching system), machine learning (a subset of AI), deep learning (a subfield of machine learning), and neural networks (which form the backbone of deep learning algorithms). Each layer represents increasingly complex and specialized applications.</span></p>
+
+<p><span style="font-weight: 400;">According the University of Toronto Faculty of Applied Science and Engineering (shout out to my Vice Dean), AI branches into two fundamental categories: symbolic AI and sub-symbolic AI (machine learning). Symbolic AI requires explicit description of relationships between things in the world. Library cataloging systems exemplify this approach&mdash;we define what "title," "author," and "citation" mean, then manually enter this data for every paper. These systems achieve accuracy when the symbolic description proves accurate, but their applications remain limited. Their results are explainable and deterministic. You can trace exactly why the system produced any given output.</span></p>
+
+<p><span style="font-weight: 400;">Sub-symbolic AI operates entirely differently. Rather than requiring humans to explicitly program relationships, machine learning systems learn patterns from large amounts of data. Neural networks&mdash;computational models inspired by biological neurons&mdash;form the foundation of this approach. A neural network teaches computers to process data in ways inspired by the human brain, using interconnected nodes or neurons in a layered structure. These networks create adaptive systems that learn from mistakes and improve continuously, allowing them to solve complicated problems with greater accuracy than traditional programming.</span></p>
+
+<p><span style="font-weight: 400;">Neural networks consist of layers of processing units. The input layer receives data, one or more hidden layers perform computational processing, and the output layer produces the final result. Each connection between nodes carries a weight that adjusts during learning. These weights and biases represent the model's "knowledge bank"&mdash;parameters collected as the model learns from training. When one node's output exceeds a threshold value, it activates and sends data to the next layer. Training data teaches neural networks and helps improve their accuracy over time.</span></p>
+
+<p><span style="font-weight: 400;">The depth of neural networks matters significantly. Modern GPUs enabled single-layer networks from the 1960s and two-to-three-layer networks from the 1980s to blossom into networks with ten, fifteen, even fifty layers today. This depth&mdash;the number of layers&mdash;gives "deep learning" its name. Deep learning now drives the best-performing systems in almost every area of artificial intelligence research.</span></p>
+
+<p><span style="font-weight: 400;">Machine learning encompasses far more than the generative text and image systems dominating recent discourse. The field includes facial recognition, adaptive cruise control, fraud detection, medical diagnostic tools, recommendation engines, speech recognition, and countless other applications. Each has different capabilities, different failure modes, and different social implications. The systems most people argue about&mdash;ChatGPT, Claude, Gemini&mdash;represent just one category: Large Language Models.</span></p>
+
+<p><span style="font-weight: 400;">LLMs are Generative Pre-trained Transformers. They are described as a category of deep learning models trained on immense amounts of data, making them capable of understanding and generating natural language and other content to perform various tasks. They've been trained on vast amounts of text to learn probabilities that one word appears near another. When you give an LLM a prompt like "Tell me about the sky," it doesn't search the internet or retrieve information from some repository of facts. Instead, it constructs a response word by word, calculating probabilities at each step to pick the next word based on learned statistical distributions. The model doesn't "know" what "sky," "blue," or "cloud" mean in any semantic sense. Rather, it has learned that "blue" appears frequently near "cloud" when humans write about "sky," so it generates that association with high probability.</span></p>
+
+<p><span style="font-weight: 400;">This distinction proves crucial&ndash;LLMs are probability machines, not logic machines. They don't aggregate information from sources or mash together phrases from training data. They construct novel text based on statistical patterns, which explains why they can produce both remarkably coherent prose and complete nonsense with equal confidence. As machine learning researchers note, LLMs can exhibit various biases because they're trained on billions of documents that reflect existing patterns in human language&mdash;including patterns we might consider problematic.</span></p>
+
+<p><span style="font-weight: 400;">The "transformer" part of the architecture doesn't mean these models transform language (a common misconception). Transformer is a technical term referring to a mechanism that helps the model stay on topic rather than rambling into incoherence. The self-attention mechanism, core to transformers, allows the model to weigh the importance of different words in relation to each other, enhancing context understanding.</span></p>
+
+<p><span style="font-weight: 400;">The architecture matters because it determines what's actually possible versus what's fantasy. When someone claims an LLM is "sentient" or "conscious," they're attributing properties the architecture cannot support, like claiming your calculator has feelings because it can solve math problems. When someone insists AI "steals" specific pieces of training data and reassembles them, they're fundamentally misunderstanding how the probabilistic model functions. When people act as if all forms of AI are equivalent, they ensure any policy response will be incoherent at best and counterproductive at worst.</span></p>
+
+<h1><strong>III. Generative AI vs. Analytical AI</strong></h1>
+
+<p><span style="font-weight: 400;">Perhaps the most damaging conflation in the current AI discourse is the artificial separation between "good AI" (analytical) and "bad AI" (generative). This distinction has become a moral taxonomy; analytical AI that detects breast cancer or predicts equipment failures gets a pass, while generative AI that creates images or writes text is cast as inherently exploitative and harmful.</span></p>
+
+<p><span style="font-weight: 400;">This framing is just technically illiterate and functionally useless.</span></p>
+
+<p><span style="font-weight: 400;">Both analytical and generative AI are built on the same foundational advances in statistics, neural network architecture, and machine learning. Analytical AI systems use statistical machine learning designed for specific tasks like classification, prediction, or decision-making based on structured data, while generative AI uses deep learning neural networks to produce new content. Though these are not opposing categories. They are different applications of the same underlying mechanisms.</span></p>
+
+<p><span style="font-weight: 400;">Consider how analytical AI actually works. To build a cancer detection system, you train a neural network on thousands of medical images, teaching it to recognize patterns associated with malignant tumors. The model learns statistical relationships between visual features and diagnostic outcomes. Now consider how generative image AI works: you train a neural network on thousands of images, teaching it to learn patterns in visual data, then generate new images based on those learned patterns. The fundamental process&mdash;learning statistical patterns from training data through neural networks&mdash;is identical.</span></p>
+
+<p><span style="font-weight: 400;">In fact, it's common to pre-train an analytical AI by first making something that functions like generative AI. For computer vision tasks, researchers often build autoencoders that try to reproduce their input (while simplifying it in the process). So when training a network to identify cancer tumors, you might first train it to generate novel images while learning to distinguish relevant features. The mechanisms that enable cancer-detecting AI to be better at detecting cancer are the same mechanisms that enable image generation AI to be good at generating images. Information output is generative regardless of whether we're generating a diagnostic prediction or generating a picture. It's all one big machine.</span></p>
+
+<p><span style="font-weight: 400;">Analytical AI employs various machine learning algorithms and neural network architectures tailored to specific tasks, utilizing techniques like regression, classification, and clustering. Generative AI uses architectures like Generative Adversarial Networks (GANs), transformers, and diffusion models. But GANs themselves illustrate the fluidity of these categories: they're used for fraud detection (analytical) by having two models compete&mdash;one (the discriminator) learns to differentiate fake from real transactions, while the other (the generator) creates synthetic transactions to fool the discriminator. This generative process produces an analytical tool.</span></p>
+
+<p><span style="font-weight: 400;">The same training data concerns, the same biases, the same questions about labor and value&mdash;all of these apply to both categories. A recommendation engine analyzing your behavior to predict what you'll buy next is extracting patterns from data just as much as an LLM generating marketing copy. The difference is in application and output format, not in fundamental mechanism or moral status.</span></p>
+
+<p><span style="font-weight: 400;">Positioning analytical AI as virtuous and generative AI as corrupt is itself a form of moral panic, and one that relies on technological illiteracy. It lets people perform ethical positions without grappling with the actual structures that determine how any technology gets deployed and who benefits from it. Whether AI is being used to detect disease or write poetry, the relevant questions remain the same: Who owns it? Who profits from it? Who bears the costs and risks? How is it being used, and in whose interest?</span></p>
+
+<h1><strong>IV. Where&rsquo;s My Water?</strong></h1>
+
+<p><span style="font-weight: 400;">Among the most frequently cited reasons to condemn AI usage is environmental impact, particularly water consumption. This talking point has achieved remarkable saturation, fueled by dramatic headlines claiming that every ChatGPT query "drinks" an entire water bottle or that AI data centers are sucking rivers dry. The narrative has a seductive simplicity: AI companies are destroying the planet for profit, and anyone who uses their products is complicit in environmental catastrophe. The reality, however, is substantially more complicated and far less sensational.</span></p>
+
+<p><span style="font-weight: 400;">Yes, AI data centers use significant amounts of water&mdash;this is not in dispute. The numbers you see in articles and reports are large numbers in absolute terms. But context matters enormously, and the viral discourse strips away any comparative framework that would allow rational assessment.</span></p>
+
+<p><span style="font-weight: 400;">Consider the actual scale. A medium-sized data center uses roughly 300,000 gallons per day (equivalent to about 1,000 households), while large hyperscale facilities may use up to 5 million gallons daily (equivalent to a town of 10,000-50,000 people). This sounds alarming until you learn that the United States has approximately 16,000 golf courses, each using between 100,000 and 2 million gallons per day. Google's thirstiest data center in Iowa consumed about 2.7 million gallons per day in 2024&mdash;less than many individual golf courses, and most of Google's data centers use substantially less.</span></p>
+
+<p><span style="font-weight: 400;">Oh, and here&rsquo;s a list of common objects you might own, and how many generative AI prompt&rsquo;s worth of water they used to make them:</span></p>
+
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Leather Shoes - 4,000,000 prompts&rsquo; worth of water</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Smartphone - 6,400,000 prompts</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Jeans - 5,400,000 prompts</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">T-shirt - 1,300,000 prompts</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A single piece of paper - 2550 prompts</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A 400 page book - 1,000,000 prompts</span></li>
+</ul>
+
+<p><span style="font-weight: 400;">The critical point that clickbait journalism constantly obscures requires precision about what "water use" actually means. Technology writer Andy Masley has spent recent months documenting how mainstream media coverage systematically conflates fundamentally different water concepts in its coverage of AI. As Masley argues in his widely-cited Substack essay "The AI Water Issue Is Fake," the distinction between consumptive and non-consumptive water use is essential for any rational analysis, yet almost entirely absent from popular discourse.</span></p>
+
+<p><span style="font-weight: 400;">When water is used but returned to its source&mdash;as when a cooling system withdraws water from a river, circulates it through servers, and returns it hours later&mdash;this is non-consumptive use. The water simply cycles through the facility; the local hydrological system experiences minimal disruption. Conversely, consumptive use removes water permanently from a local system through evaporation. Evaporated water enters the global water cycle but does not return to its original watershed. This distinction matters enormously: a data center that withdraws 1 million gallons daily but returns 900,000 gallons causes far less stress than one that consumes 300,000 gallons, even though the first figure sounds larger.</span></p>
+
+<p><span style="font-weight: 400;">Water-related reporting on AI systematically conflates these categories. When journalists cite statistics about data center "water usage," they typically combine consumptive and non-consumptive use without distinction, inflating the apparent crisis. This conflation is deliberate; outlets can cite the total water "withdrawal" figure, which sounds more dramatic, without clarifying how much is actually returned. This is not a technicality; it is the central fact upon which the entire environmental argument rests.</span></p>
+
+<p><span style="font-weight: 400;">A second crucial distinction separates direct from indirect water use. Direct use refers to water withdrawn onsite at the data center itself for server cooling. Indirect use refers to water consumed at power plants generating electricity the data center draws from the grid. U.S. electricity generation consumes approximately 4.35 liters of water per kilowatt-hour produced (this figure includes both consumptive use via thermoelectric plants and evaporative loss from hydroelectric reservoirs). This is the price of electrification: every electronic device you use&mdash;not just data centers&mdash;has an indirect water footprint embedded in its electricity supply.</span></p>
+
+<p><span style="font-weight: 400;">The distribution of AI's water use is instructive: approximately 80% occurs indirectly at power plants, and only about 20% occurs onsite in data centers themselves. This matters because data centers have far more control over their direct consumption than their indirect consumption (which depends on regional electricity generation mix). Yet nearly all public concern focuses on the smaller, more controllable portion while ignoring the larger, systemic issue.</span></p>
+
+<p><span style="font-weight: 400;">At the national level, the concern dissolves under scrutiny. All U.S. data centers (which host the entire internet, not merely AI) consumed approximately 0.2% of national freshwater in 2023. AI specifically represents roughly 20% of data center electricity use&mdash;implying AI accounts for approximately 0.04% of national freshwater consumption, or 0.008% when counting only onsite consumption. This is 3% of the water consumed by the American golf industry.</span></p>
+
+<p><span style="font-weight: 400;">Even accounting for projected growth: if AI energy consumption increases tenfold by 2030, AI will consume approximately 0.08% of U.S. freshwater&mdash;equivalent to 5% of current golf course consumption or 173 square miles of irrigated corn farms. This is not trivial, but it is not the existential threat portrayed in viral articles.</span></p>
+
+<p><span style="font-weight: 400;">Rather than remaining static, data center operators actively implement technologies reducing water consumption, driven by operational cost incentives. Many new data centers use closed-loop cooling systems that reduce freshwater use by up to 70 percent. Immersion cooling, where servers are submerged in non-conductive dielectric fluids, can eliminate evaporative water loss entirely. Air cooling, while increasing electricity demand, can reduce direct water consumption to zero. These trade-offs between water use, energy efficiency, and carbon emissions are complex, but they're actively being addressed by the industry precisely because operational costs incentivize efficiency.</span></p>
+
+<p><span style="font-weight: 400;">The full environmental picture requires acknowledging an awkward trade-off: reducing direct water consumption often increases electricity consumption. Air cooling uses no water but requires more energy. This energy must come from somewhere, and its generation will consume water indirectly unless the electricity comes from wind, solar, or nuclear sources. This trade-off is legitimate though it is not unique to AI. All electrified industries face similar choices between local water impact and global carbon impact. The framework for addressing it&mdash;prioritizing renewable energy sources over fossil fuel generation&mdash;applies universally, not specifically to AI.</span></p>
+
+<p><span style="font-weight: 400;">The current discourse, dominated by decontextualized statistics and inflammatory rhetoric, serves primarily to generate clicks and moral outrage rather than informed policy. If we actually care about water conservation, we might start by questioning why we pipe millions of gallons daily to desert golf courses rather than focusing exclusively on the relative newcomer of AI data centers.</span></p>
+
+<h1><strong>V. Karl Marx: I'm quite fond of labubu</strong></h1>
+
+<p><span style="font-weight: 400;">One of the most revealing aspect of AI moral panic is the resurrection of long-discredited arguments about automation and labor. The claim that "automation is inherently bad" keeps floating around left-wing spaces, treated as self-evident rather than requiring justification. This position doesn't withstand even minimal scrutiny.</span></p>
+
+<p><span style="font-weight: 400;">There is no moral good in human labor per se. Labor is morally neutral. Spending eight hours washing dishes by hand is not inherently more virtuous than using a dishwasher. Transcribing documents manually is not morally superior to using speech recognition software. Calculating spreadsheets with pencil and paper doesn't make you more ethically pure than using Excel. The valorization of labor-as-such is a confusion, one that conflates the dignity of workers with the act of work itself.</span></p>
+
+<p><span style="font-weight: 400;">The issue&mdash;the only issue that has ever mattered&mdash;is who captures the value produced by increased productivity. This has been the central question since the dawn of industrial capitalism. When mechanization allows a factory to produce twice as many widgets with the same number of workers, what happens? Under capitalism, the answer is depressingly consistent: workers don't get to go home early at full pay. They don't share in the productivity gains. Instead, production doubles, profit margins expand, and the surplus value flows upward to capital owners.</span></p>
+
+<p><span style="font-weight: 400;">As Marx observed over 150 years ago, capitalism presses to reduce labor time to a minimum while simultaneously positing labor time as the sole measure and source of wealth&mdash;a moving contradiction. Technology that increases productivity doesn't automatically translate into more leisure or higher wages for workers. It translates into more output, more goods to sell, more profit to extract. The shoe factory worker whose new machine lets her produce 100 pairs of shoes in four hours instead of eight doesn't get the afternoon off. She's expected to produce 200 pairs in an eight-hour day, usually at the same wage.</span></p>
+
+<p><span style="font-weight: 400;">This isn't a feature of automation. Automation enables capital to replace labor in tasks, shifting the task content of production against labor. But they note this can be counterbalanced by a reinstatement effect when new tasks are created in which labor has comparative advantage. Whether automation produces widespread unemployment or merely reorganizes the labor market depends entirely on social and economic structures, not on the technology itself.</span></p>
+
+<p><span style="font-weight: 400;">The history of automation bears this out. The Luddites of the early 19th century protested textile mechanization, fearing technological unemployment. Their worst fears were confounded not because the machines were benign, but because the specific type of mechanization was only financially worthwhile to capitalists if it replaced </span><em><span style="font-weight: 400;">some </span></em><span style="font-weight: 400;">labor but not all. New forms of work emerged to superintend the technology&mdash;mechanics, supervisors, accountants. New commodities created demand for new sectors of production. The workers displaced from one form of labor moved into new activities. The question was never "will machines take all the jobs?" but "what kind of work will exist, under what conditions, and who will benefit?"</span></p>
+
+<p><span style="font-weight: 400;">I use generative AI regularly for menial tasks: writing formulaic emails, data entry, proofreading code, and explaining difficult concepts I'm learning. These are not the parts of my work I find meaningful or rewarding. They're the tedious necessities that eat time I'd rather spend on actual creative or intellectual labor. As writer Joanna Maciejewska succinctly put it: "I want AI to do my laundry and dishes so that I can do art and writing, not for AI to do my art and writing so that I can do my laundry and dishes."</span></p>
+
+<p><span style="font-weight: 400;">But under capitalism, that's precisely the inversion we get. Technology develops not to free humans from drudgery but to maximize profit extraction. If automating creative work is more immediately profitable than automating housework, that's where investment flows. The problem isn't that we've developed tools that can generate images or text. The problem is that we've developed them in an economic system designed to concentrate gains at the top while distributing precarity downward.</span></p>
+
+<p><span style="font-weight: 400;">This is why the hand-wringing about AI "taking creative jobs" rings hollow to me. Creative workers have always been precarious under capitalism. Writers, artists, and musicians have been systematically undervalued long before GPT-4. The vast majority have always struggled to earn a living wage from their work. Creatives have always had their work "stolen" by companies and even other artists (guilty as charged!), long before the rise of gen AI. AI didn't create this precarity&mdash;capitalism did. AI is simply the latest mechanism through which that precarity expresses itself.</span></p>
+
+<p><span style="font-weight: 400;">The moral panic misdirects our attention. Rather than asking "how do we stop this technology?" we should be asking "how do we restructure economic relations so that productivity gains are shared broadly rather than captured privately?" Rather than demanding that workers continue to perform repetitive, soul-crushing tasks because we've romanticized labor itself, we should be demanding a reorganization of work and a redefinition of how value and compensation are determined.</span></p>
+
+<h1><strong>VI. The Problem is Capitalism (Surprise)</strong></h1>
+
+<p><span style="font-weight: 400;">Here's where the conversation needs to sharpen, because genuine harms are occurring and they demand a clear-eyed analysis of causation. Elon Musk's xAI/Grok has recently been implicated in generating Child Sexual Abuse Material (CSAM). This is not an isolated incident. AI tools are being weaponized to create hyper-realistic revenge porn and non-consensual deepfakes, often targeting women. According to UN Women, 38 percent of women have personally experienced online violence, and 85 percent have witnessed digital violence against others. Deepfake pornography constitutes 96 percent of deepfake content online, overwhelmingly featuring women and underage girls who never consented to its creation.</span></p>
+
+<p><span style="font-weight: 400;">These are horrifying abuses. AI systems are also demonstrably failing vulnerable people in other ways. A 14-year-old named Sewell Setzer III died by suicide in 2024, with his mother's lawsuit alleging that his interactions with a Character.AI chatbot instigated his actions. While the causal chain is disputed and the research on AI's mental health impacts remains inconclusive, it's clear that companies are deploying inadequately tested systems without sufficient safeguards, particularly concerning child safety.</span></p>
+
+<p><span style="font-weight: 400;">Corporations are stealing information, building data centers that displace communities, engaging in opaque practices that prevent accountability. Amazon has requested a 48 percent increase in water consumption permits for its data centers in Aragon, Spain&mdash;a region simultaneously requesting EU aid for drought conditions. Google fought to keep its water usage secret from farmers, environmental groups, and Native American tribes concerned about its impact. Major tech companies have made pledges to become "water positive" by 2030, but transparency remains abysmal, with reporting practices varying widely and only 10 percent of data center operators tracking water use across all facilities.</span></p>
+
+<p><span style="font-weight: 400;">All of this is true. All of it is important. And none of it is an argument against the technology per se.</span></p>
+
+<p><span style="font-weight: 400;">The problem is capitalism. The problem is a system that incentivizes extracting maximum value at minimum cost, externalizing harms onto the public while privatizing gains. The problem is lack of regulation, lack of accountability, and lack of democratic control over how powerful technologies are developed and deployed.</span></p>
+
+<p><span style="font-weight: 400;">Consider: you wouldn&rsquo;t (I hope) argue that nuclear fission is inherently evil because it enabled nuclear weapons. We should recognize that the same scientific advance that created the atomic bomb also made possible clean nuclear energy. The question isn't whether we should have discovered fission; that knowledge exists now, and we can't unknow it. The question is how we govern its use, who controls access to it, and what regulatory structures prevent its deployment for harm.</span></p>
+
+<p><span style="font-weight: 400;">I'm currently pursuing research in nuclear reactor materials (pending proposal and funding approval, fingers crossed). I think constantly about how my work or my colleagues' work could potentially contribute to nuclear weapons proliferation. It's a difficult moral dilemma. But I'd still rather live in a world where we discovered fission than not. Nuclear power, properly regulated and deployed in the public interest rather than private profit, could be crucial to addressing climate change, if we can overcome the political power of coal and oil lobbies.</span></p>
+
+<p><span style="font-weight: 400;">The same logic applies to AI. Machine learning tools have genuine beneficial applications: medical diagnostics that catch diseases earlier, accessibility features that help disabled people interact with technology, scientific research tools that accelerate discovery. These aren't hypothetical, they exist and they help people. Should we abandon all of these because the same underlying technology can be misused?</span></p>
+
+<p><span style="font-weight: 400;">This argument pattern&mdash;that a technology is irredeemably tainted by its association with harm&mdash;appears nowhere else in progressive politics with such force. Schools are not inherently bad, though they've been used extensively to harm people, especially minorities. Abortion is not inherently bad, though it's been weaponized for eugenics. Trains are not inherently bad, though they've been used to transport people to concentration camps. The internet is not inherently bad, though it's enabled unprecedented surveillance and harassment. Agriculture and industry as a whole have been vehicles for immense harm, yet we don't reject them categorically.</span></p>
+
+<p><span style="font-weight: 400;">The purity-testing around AI feels motivated by something other than consistent ethical reasoning. It resembles contamination-based morality more than consequentialist analysis. Once something has been associated with bad actors or harmful uses, it becomes ontologically tainted, and anyone who touches it shares in that taint. Meanwhile, those who have not been contaminated by AI express a bizarre, self-righteous pride in being so; some proclaiming themselves "AI virgins" (okay seriously, what the fuck guys). This is the logic of religious taboo, not reasonable politics.</span></p>
+
+<p><span style="font-weight: 400;">What makes this especially frustrating is that the focus on technology-as-evil obscures the actual mechanisms of harm. When we say "AI is bad," we direct attention away from specific, actionable problems: the lack of regulation requiring safety testing before deployment, the absence of meaningful consent for training data, the inadequate safeguards against generating illegal content, the opacity that prevents public accountability, the concentration of power in a handful of massive corporations.</span></p>
+
+<p><span style="font-weight: 400;">The current mass panic lets people feel morally superior and politically engaged while avoiding this harder work. It's easier to shame individuals for using ChatGPT for their homework than to organize for regulation. It's easier to declare that AI is evil than to analyze the specific corporate structures enabling exploitation. It's easier to demand purity than to fight for power.</span></p>
+
+<h1><strong>VII. You Don&rsquo;t Know What You Don&rsquo;t Know</strong></h1>
+
+<p><span style="font-weight: 400;">Let's bring this full circle. The current discourse around AI is characterized by technological illiteracy, sensationalist misinformation, and misdirected rage. People are conducting witch hunts over AI usage while remaining ignorant about what AI is, how it works, what its actual costs and benefits are, or where the meaningful points of intervention might be.</span></p>
+
+<p><span style="font-weight: 400;">This confusion serves corporate power remarkably well. While activists expend energy shaming each other for using grammar checkers, tech companies are lobbying against regulation, fighting transparency requirements, and consolidating control over infrastructure that will shape society for decades. While people argue about whether using Midjourney to generate anime titties is morally equivalent to murder, venture capital is pouring billions into systems designed to maximize extraction and minimize worker power.</span></p>
+
+<p><span style="font-weight: 400;">Geoffrey Hinton, a great man I had the immense honour of meeting, understands this tension better than most. The University of Toronto professor emeritus, &ldquo;Godfather of AI&rdquo;, and 2024 Nobel Prize winner in Physics pioneered the very neural network architectures that enable modern AI. For decades, his work on backpropagation and deep learning was dismissed as a waste of time by most in the field. He kept working anyway, believing that if the brain could learn by adjusting connection strengths between neurons, artificial neural networks could too. He was vindicated when his techniques became foundational to everything from computer vision to large language models.</span></p>
+
+<p><span style="font-weight: 400;">Now Hinton has become one of AI's most prominent critics, leaving Google in 2023 to speak freely about safety concerns without corporate constraints. His warnings deserve attention precisely because they come from deep understanding rather than panic or ignorance. Hinton fears AI systems may be more intelligent than we realize and worries about immediate risks including fake news, bias in employment and policing, and autonomous weapons. More fundamentally, he argues we're entering unprecedented territory with no guarantee of safety.</span></p>
+
+<p><span style="font-weight: 400;">But here's what's crucial about Hinton's position: he doesn't advocate abandoning the technology. At his Nobel acceptance speech, Hinton acknowledged that AI "will enable us to create highly intelligent and knowledgeable assistants who will increase productivity in almost all industries." He's particularly optimistic about healthcare, where AI already matches radiologists at analyzing medical images and shows promise in drug design. His message is nuanced: tremendous benefits are possible if we can share productivity gains equitably rather than allowing them to concentrate in corporate hands.</span></p>
+
+<p><span style="font-weight: 400;">The University of Toronto press conference following his Nobel win revealed Hinton's real concern. His worry centers on what happens "when we get things more intelligent than ourselves" and whether we'll be able to control them. He's calling for something specific and actionable: he wants governments to force large companies to dedicate substantial computational resources&mdash;perhaps a third of their computing power&mdash;to safety research rather than the tiny fractions currently allocated. He criticizes tech companies for lobbying to reduce already minimal regulation.</span></p>
+
+<p><span style="font-weight: 400;">Hinton also offered advice that I will always keep close to me: "If you believe in something, don't give up on it until you understand why that belief is wrong."&nbsp; He spent forty years working on neural networks while most of his field insisted they were worthless. He was right, they were wrong, and his persistence changed the world. But he also demonstrates intellectual honesty by publicly reconsidering the implications of his life's work when evidence demands it.</span></p>
+
+<p><span style="font-weight: 400;">This is the kind of thinking we need, the kind that is rigorous, informed, and willing to grapple with complexity rather than retreating into simplistic moral absolutes. The current discourse fails this standard catastrophically.</span></p>
+
+<p><span style="font-weight: 400;">So here's my suggestion: try AI. Really, seriously, try it. You can self-host a private, local LLM using open-source tools like Ollama. Play around with it. Generate some images. Have it write you a poem or help debug your code. Understand how it works, what its limitations are, and what its benefits could be. You won't die instantaneously. You won't become morally contaminated. You'll just have a better empirical basis for forming opinions about the technology.</span></p>
+
+<p><span style="font-weight: 400;">And once you understand it, turn your attention to the people that determine how it's used. Organize for mandatory transparency in training data sourcing and model capabilities. Push for public funding of AI development outside the venture capital model. Demand strong regulatory frameworks requiring safety testing before deployment. Fight for redistribution of productivity gains through progressive taxation and expanded social programs. Build international cooperation on standards and human rights protections.</span></p>
+
+<p><span style="font-weight: 400;">The future is not determined by the technology we develop but by the social relations within which that technology operates. Machine learning, like nuclear fission, like the internet, like the printing press, is a powerful tool that can be deployed for harm or benefit. The question has never been whether these tools should exist; they do exist, and that genie isn't going back in the bottle. The question is who controls them and in whose interest they operate.</span></p>
+
+<p><span style="font-weight: 400;">We should've never let them take AI away from furries, transgender women, grad students, and that one nerdy computer guy named Kenneth.</span></p>
+
+<p><span style="font-weight: 400;">---</span></p>
+
+<h1><strong>Reference List</strong></h1>
+
+<p><span style="font-weight: 400;">Acemoglu, D., &amp; Restrepo, P. (2019). Automation and new tasks: How technology displaces and reinstates labor. Journal of Economic Perspectives, 33(2), 3&ndash;30. https://doi.org/10.1257/jep.33.2.3</span></p>
+
+<p><span style="font-weight: 400;">Bender, E. M., &amp; Koller, A. (2020). Climbing towards NLU: On meaning, form, and understanding in the age of data. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (pp. 5185&ndash;5198).</span></p>
+
+<p><span style="font-weight: 400;">Braverman, H. (1974). Labor and monopoly capital: The degradation of work in the twentieth century. Monthly Review Press.</span></p>
+
+<p><span style="font-weight: 400;">Bowman, N. D. (2023). Moral panics or mindful caution? Moderating excitement and expectation of AI's impact. Newhouse Impact Journal.</span></p>
+
+<p><span style="font-weight: 400;">Bloomberg. (2025). AI is draining water from areas that need it most. https://www.bloomberg.com/graphics/2025-ai-impacts-data-centers-water-data/</span></p>
+
+<p><span style="font-weight: 400;">Dallas Express. (2025). AI's thirst trap: Data centers guzzle water while droughts intensify.</span></p>
+
+<p><span style="font-weight: 400;">Deepfake Research Consortium. (2024). State of deepfakes: Taxonomy and trends.</span></p>
+
+<p><span style="font-weight: 400;">Doshi-Velez, F., &amp; Kim, B. (2017). Towards a rigorous science of interpretable machine learning. arXiv preprint arXiv:1702.08608.</span></p>
+
+<p><span style="font-weight: 400;">Digital Infrastructure. (2024). Data center water usage: A comprehensive guide. https://dgtlinfra.com/data-center-water-usage/</span></p>
+
+<p><span style="font-weight: 400;">Darden University. (2026). When the cloud hits the ground: Data centers, communities, and the business of balance.</span></p>
+
+<p><span style="font-weight: 400;">Environmental and Energy Study Institute. (2021). U.S. data center water consumption statistics [Cited in Dallas Express, 2025].</span></p>
+
+<p><span style="font-weight: 400;">European Environmental Bureau. (2025). Data centers and water consumption in Europe.</span></p>
+
+<p><span style="font-weight: 400;">Goodfellow, I., Bengio, Y., &amp; Courville, A. (2016). Deep learning. MIT Press.</span></p>
+
+<p><span style="font-weight: 400;">Goodfellow, I., Pouget-Abadie, J., Mirza, M., et al. (2014). Generative adversarial nets. In Advances in Neural Information Processing Systems (pp. 2672&ndash;2680).</span></p>
+
+<p><span style="font-weight: 400;">Hastie, T., Tibshirani, R., &amp; Friedman, J. (2009). The elements of statistical learning: Data mining, inference, and prediction (2nd ed.). Springer.</span></p>
+
+<p><span style="font-weight: 400;">Harvey, D. (2010). A companion to Marx's capital. Verso Books.</span></p>
+
+<p><span style="font-weight: 400;">Hinton, G. E., Osinski, D. E., &amp; Rumelhart, D. E. (1986). Learning representations by back-propagating errors. Nature, 323(6088), 533&ndash;536.</span></p>
+
+<p><span style="font-weight: 400;">Hinton, G. E. (2023). Statement upon leaving Google. DeepMind.</span></p>
+
+<p><span style="font-weight: 400;">Hinton, G. E. (2024a). Nobel prize acceptance speech. University of Toronto Archives.</span></p>
+
+<p><span style="font-weight: 400;">Hinton, G. E. (2024b). University of Toronto press conference on AI development and societal impact.</span></p>
+
+<p><span style="font-weight: 400;">Hinton, G. E. (2024c). University of Toronto press conference following Nobel Prize announcement.</span></p>
+
+<p><span style="font-weight: 400;">IBM. (2023). AI vs. machine learning vs. deep learning vs. neural networks. Official IBM Think Academy. https://www.ibm.com/think/topics/ai-vs-machine-learning-vs-deep-learning-vs-neural-networks</span></p>
+
+<p><span style="font-weight: 400;">Jurafsky, D., &amp; Martin, J. H. (2023). Speech and language processing (3rd ed. draft), Chapter 7: Large language models. https://web.stanford.edu/~jurafsky/slp3/7.pdf</span></p>
+
+<p><span style="font-weight: 400;">Krizhevsky, A., Sutskever, I., &amp; Hinton, G. E. (2012). ImageNet classification with deep convolutional neural networks. In Proceedings of NIPS 2012 (pp. 1097&ndash;1105).</span></p>
+
+<p><span style="font-weight: 400;">LeCun, Y., Bengio, Y., &amp; Hinton, G. (2015). Deep learning. Nature, 521(7553), 436&ndash;444.</span></p>
+
+<p><span style="font-weight: 400;">Li, R., Gu, Y., Zhang, Z., et al. (2023). Making AI less "thirsty": Uncovering and addressing the freshwater footprint of artificial-intelligence model training. arXiv preprint. UC Riverside &amp; UT Arlington.</span></p>
+
+<p><span style="font-weight: 400;">Lincoln Institute of Land Policy. (2025). Data drain: The land and water impacts of the AI boom. https://www.lincolninst.edu/publications/land-lines-magazine/articles/land-water-impacts-data-centers</span></p>
+
+<p><span style="font-weight: 400;">Masley, A. (2025). The AI water issue is fake. Substack. https://andymasley.substack.com/p/the-ai-water-issue-is-fake</span></p>
+
+<p><span style="font-weight: 400;">Marder, B., Joinson, A., Shankar, A., &amp; Thirlaway, K. (2020). Social media and moral panics: Assessing the effects of technological change on societal reaction. New Media &amp; Society, 23(3), 430&ndash;447.</span></p>
+
+<p><span style="font-weight: 400;">Marx, K. (1867). Capital: A critique of political economy (Vol. 1). https://www.marxists.org/archive/marx/works/1867-c1/ch07.htm</span></p>
+
+<p><span style="font-weight: 400;">Orben, A. (2020). The Sisyphean cycle of technology panics. Psychological Bulletin, 147(1), 1&ndash;24.</span></p>
+
+<p><span style="font-weight: 400;">Russell, S. J., &amp; Norvig, P. (2020). Artificial intelligence: A modern approach (4th ed.). Prentice Hall.</span></p>
+
+<p><span style="font-weight: 400;">Sustainability Magazine. (2025). How are companies pioneering data centre zero water cooling. https://sustainabilitymag.com/</span></p>
+
+<p><span style="font-weight: 400;">University of Toronto. (2025). AI task force and guidelines: Toward an AI-ready university. https://ai.utoronto.ca/guidelines/</span></p>
+
+<p><span style="font-weight: 400;">U.S. Geological Survey. (2024). Water use in the United States: Thermoelectric power generation.</span></p>
+
+<p><span style="font-weight: 400;">U.S. Golf Association. (2024). How much water does golf use and where does it come from?</span></p>
+
+<p><span style="font-weight: 400;">United Nations Women. (2024). Measuring and addressing online violence against women. https://www.unwomen.org</span></p>
+
+<p><span style="font-weight: 400;">Vaswani, A., Shazeer, N., Parmar, N., et al. (2017). Attention is all you need. In Advances in Neural Information Processing Systems (pp. 5998&ndash;6008).</span></p>
+
+<p><span style="font-weight: 400;">Water Footprint Network. (2022). The hidden water in everyday products. https://watercalculator.org/</span></p>
+
+<p><span style="font-weight: 400;">World Economic Forum. (2026). What new water circularity can look like for data centres. https://www.weforum.org/stories/2026/01/data-centres-and-water-circularity/</span></p>
+
+
+
+
+                  
+                </div>
+
+               
+            </div>
+
+            <footer>
+                <p>wriorango // est. 2024</p>
+             
+                    <a href="writing.html">← back to writing</a> · 
+                    <a href="https://wriorango.neocities.org/">home</a>
+                </p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
