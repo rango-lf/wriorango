@@ -18,6 +18,7 @@
     { label: "fave media", href: "fave_media.html" },
     { label: "dmo", href: "dmo.html" },
     { label: "sga", href: "sga.html" },
+    { label: "vito", href: "vito.html" },
     { label: "bookmarks", href: "bookmarks.html" },
     { label: "links + credit", href: "links.html" },
   ];
