@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-  var SITE_TITLE = "🦎 wriorango";
+  var SITE_TITLE = "wriorango";
   var SITE_SUBTITLE = "";
   var PROFILE_IMAGE = "img/avatar.svg";
   var PROFILE_BLURB =
@@ -17,6 +17,7 @@
     { label: "guestbook", href: "https://rango.atabook.org/" },
     { label: "fave media", href: "fave_media.html" },
     { label: "dmo", href: "dmo.html" },
+    { label: "sga", href: "sga.html" },
     { label: "bookmarks", href: "bookmarks.html" },
     { label: "links + credit", href: "links.html" },
   ];
