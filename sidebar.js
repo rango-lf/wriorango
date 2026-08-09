@@ -49,7 +49,7 @@
       '<div class="subtitle">' + SITE_SUBTITLE + "</div>" +
       '<div class="profile">' +
         '<img src="https://i.pinimg.com/736x/30/50/fe/3050fe35ac0e3f8e1fb94c9e8137a22b.jpg" alt="profile picture">' +
-        '<p class="profile-desc">' +'rango / he / adult </p>' + '<p class="profile-desc">' +' canadian' +'                                                                                      <iframe src="https://petrapixel.neocities.org/widgets/statuscafe?center=0&font=MS Gothic&fontSize=15px&color=white&linkColor=white&username=rango7987&hideUsername=0" style="margin: 2px; margin-bottom: -14px; width: 260px; align-content: left; height: 64px; padding: 5px; margin-top: -9px; background-color: black" frameborder="0" title="Status.Cafe Status"></iframe>' + "</p>" +
+        '<p class="profile-desc">' +'rango / he / adult </p>' + '<p class="profile-desc">' +'🇨🇦 🇲🇾 🇭🇰' +'                                                                                      <iframe src="https://petrapixel.neocities.org/widgets/statuscafe?center=0&font=MS Gothic&fontSize=15px&color=white&linkColor=white&username=rango7987&hideUsername=0" style="margin: 2px; margin-bottom: -14px; width: 260px; align-content: left; height: 64px; padding: 5px; margin-top: -9px; background-color: black" frameborder="0" title="Status.Cafe Status"></iframe>' + "</p>" +
       "</div>" +
       '<nav class="menu" id="menu">' + buildLinksHTML() + "</nav>"
     );
