@@ -1,74 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="wriorango.css">
-    <title>100 webmaster questions // rango's web hell hole</title>
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>100 webmaster questions :: wriorango</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <div id="header-placeholder"></div>
-          <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-                
-                // Find the nav element
-                const nav = document.querySelector('nav');
-                
-                if (nav) {
-                    // Wrap existing nav content in a container
-                    const existingUl = nav.querySelector('ul');
-                    
-                    // Create nav container
-                    const navContainer = document.createElement('div');
-                    navContainer.className = 'nav-container';
-                    
-                    // Create site name
-                    const siteName = document.createElement('div');
-                    siteName.className = 'site-name';
-                    siteName.innerHTML = '<a href="index.html">rango\'s hell hole</a>';
-                    
-                    // Create hamburger menu
-                    const menuBtn = document.createElement('input');
-                    menuBtn.className = 'menu-btn';
-                    menuBtn.type = 'checkbox';
-                    menuBtn.id = 'menu-btn';
-                    
-                    const menuIcon = document.createElement('label');
-                    menuIcon.className = 'menu-icon';
-                    menuIcon.htmlFor = 'menu-btn';
-                    menuIcon.innerHTML = '<span class="navicon"></span>';
-                    
-                    // Clear nav and rebuild structure
-                    nav.innerHTML = '';
-                    navContainer.appendChild(siteName);
-                    navContainer.appendChild(menuBtn);
-                    navContainer.appendChild(menuIcon);
-                    navContainer.appendChild(existingUl);
-                    nav.appendChild(navContainer);
-                }
-            });
-    </script>
+	<div class="layout">
+		<div id="sidebar" class="sidebar"><script src="sidebar.js" defer></script></div>
+		<div class="main">
+			<div class="content-grid">
+				<article class="card card--wide">
+					<h1 class="article-title">100 webmaster questions</h1>
+					<div class="article-meta">january 8, 2026</div>
 
-        <main>
-            <div class="breadcrumb">
-                <a href="https://wriorango.neocities.org/">home</a> / <a href="https://wriorango.neocities.org/writing.html">writing</a> / <a href="https://wriorango.neocities.org/writing.html#blog">blog</a> / 100 webmaster questions
-            </div>
-
-            <div class="article-container">
-                <div class="article-header">
-                    <h1 class="article-title">100 Webmaster Questions</h1>
-                    <div class="article-meta">
-                        <span> January 8, 2026</span>
-
-                    </div>
-                </div>
-
-                <div class="article-content">
+					<div class="article-content">
                   
                 <p>This questionnaire was created by <a href="https://mouseling.net/100webmaster" target="_blank"> Mouseling.net</a>.</p>
                   
@@ -374,21 +322,12 @@
 <p>This was fun and introspective.</p>
 </dl>
 
-
-                  
-                </div>
-
-               
-            </div>
-
-            <footer>
-                <p>wriorango // est. 2024</p>
-             
-                    <a href="writing.html">← back to writing</a> · 
-                    <a href="https://wriorango.neocities.org/">home</a>
-                </p>
-            </footer>
-        </main>
-    </div>
+					</div>
+				</article>
+			</div>
+			<footer class="site-footer">© 2026 wriorango — running on ovaltine</footer>
+		</div>
+	</div>
+	<script src="js/sidebar.js"></script>
 </body>
 </html>
